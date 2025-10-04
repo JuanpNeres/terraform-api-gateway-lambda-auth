@@ -9,9 +9,3 @@ variable "lambda_function_name" {
   type        = string
   default     = "user-authentication-lambda"
 }
-
-variable "api_gateway_name" {
-  description = "The name of the API Gateway."
-  type        = string
-  default     = "UserAuthenticationAPI"
-}
