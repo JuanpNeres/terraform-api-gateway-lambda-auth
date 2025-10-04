@@ -1,6 +1,6 @@
 # Terraform API Gateway and Lambda Authentication
 
-This project sets up an API Gateway integrated with AWS Lambda for user authentication, utilizing an RDS database for storing user credentials.
+This project sets up an API Gateway integrated with AWS Lambda for user authentication.
 
 ## Project Structure
 
@@ -12,14 +12,11 @@ terraform-api-gateway-lambda-auth
 │   ├── outputs.tf             # Output values after deployment
 │   ├── api_gateway.tf         # API Gateway configuration
 │   ├── lambda.tf              # Lambda function configuration
-│   ├── rds.tf                 # RDS instance configuration
 │   └── modules
 │       ├── api_gateway
 │       │   └── main.tf        # API Gateway module
-│       ├── lambda
-│       │   └── main.tf        # Lambda module
-│       └── rds
-│           └── main.tf        # RDS module
+│       └── lambda
+│           └── main.tf        # Lambda module
 └── README.md                  # Project documentation
 ```
 
@@ -41,7 +38,7 @@ terraform-api-gateway-lambda-auth
    ```
 
 4. **Customize Variables**
-   - Edit `variables.tf` to set your desired configurations such as region, instance types, and database credentials.
+   - Edit `variables.tf` to set your desired configurations such as region and Lambda function name.
 
 5. **Initialize Terraform**
    ```bash
@@ -63,12 +60,12 @@ terraform-api-gateway-lambda-auth
 
 ## Usage
 
-- The API Gateway will expose endpoints for user authentication.
-- The Lambda function will handle the authentication logic and interact with the RDS database.
+- The API Gateway exposes endpoints for user authentication.
+- The Lambda function handles the authentication logic.
 
 ## Notes
 
-- Ensure that your Lambda function has the necessary permissions to access the RDS instance.
+- Ensure that your Lambda function has the necessary permissions for its operations.
 - Monitor the AWS console for logs and metrics related to the API Gateway and Lambda function for troubleshooting.
 
 ## License

@@ -5,7 +5,3 @@ output "api_gateway_endpoint" {
 output "lambda_function_name" {
   value = aws_lambda_function.example.function_name
 }
-
-output "rds_endpoint" {
-  value = aws_db_instance.example.endpoint
-}
